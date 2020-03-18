@@ -1,0 +1,50 @@
+/*Cael Phillips, 000397240*/
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+	margin-left: 2%;
+	margin-right: 2%;
+	
+	height: 900px;
+}
+h1{
+	margin-top: 20px;
+	text-align: center;
+	color: #369;
+}
+h2{
+	background-color: lightblue;
+	color: #369;
+	padding: 12px;
+}
+h3{
+	background-color: lightgrey;
+	color: white;
+	padding: 12px;
+}
+nav{
+	text-align: center;
+}
+nav a{
+	margin-right: 10px;
+}
+footer{
+	text-align: center;
+}
+.bigroom{
+	text-align: center;
+	width: 50%;
+	height: 600px;
+	margin-left: 25%;
+}
+.bigroom img{
+	height: 100%;
+	width: 100%;
+}
+.smallfont{
+	margin-top: 25px;
+	text-align: center;
+	font-size: 0.9em;
+	color: black;
+}

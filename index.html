@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sandy and Leslie's Apartment</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+	<meta charset="utf-8">
+	<!--Cael Phillips, 000397240-->
+	<style>
+		#floorplan{
+			text-align: center;
+		}
+		
+		#flexcontainer{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
+			margin-top: 50px;
+		}
+		#survey{
+			flex-basis: 35%;
+		
+		}
+		#services{
+			flex-basis: 30%;
+			
+		}
+		#location{
+			flex-basis: 25%;
+			
+		}
+		#welcome{
+			flex-basis: 40%;
+		
+		}
+		#gallery{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 20%;
+			
+		}
+		.box{
+			flex-basis: 250px;
+			height: 250px;
+			
+		}
+		figure{
+			height:180px;
+			width:100%;
+			
+			margin: 0;
+		}
+		figure img{
+			width: 100%;
+			height: 100%;
+		}
+		#location figure img{
+			height:200%;
+			width: 100%;
+		}
+		table{
+			border:1px solid black;
+			border-collapse: collapse;
+		}
+		th{
+			border:1px solid black;
+			background: lightgrey;
+			font-size: 12pt;
+			padding: 5px;
+		}
+		td{
+			border: 1px solid black;
+			text-align: left;
+			padding: 10px;
+			font-size: 11pt;
+		}
+		#warning{
+			background: beige;
+			text-align: center;
+		}
+		label{
+			margin-right: 20px;
+		}
+	</style>
+
+
+
+</head>
+<body>
+	<h1>Sandy and Leslie's Apartment</h1>
+	<p class="smallfont">Click a room for a detailed view</p>
+
+	<div id="floorplan">
+	<img src="images/apartmentfloorplan.jpg" usemap="#image-map" alt="floorplan">
+
+	<map name="image-map">
+	    <area alt="Bedroom" title="Bedroom" href="html/bedroom1.html" coords="45,11,195,161" shape="rect">
+	    <area alt="Bedroom 2" title="Bedroom 2" href="html/bedroom2.html" coords="215,26,319,138" shape="rect">
+	    <area alt="Dining Room" title="Dining Room" href="html/diningroom.html" coords="415,137,44" shape="circle">
+	    <area alt="Kitchen" title="Kitchen" href="html/kitchen.html" coords="254,213,387,393" shape="rect">
+	    <area alt="Living Room" title="Living Room" href="html/livingroom.html" coords="404,202,405,389,547,390,523,175,445,172" shape="poly">
+	</map>		
+	</div>
+	<br>
+	<nav>
+		<a href="index.html">Apartment</a>
+		<a href="html/bedroom1.html">Bedroom 1</a>
+		<a href="html/bedroom2.html">Bedroom 2</a>
+		<a href="html/diningroom.html">Dining Room</a>
+		<a href="html/kitchen.html">Kitchen</a>
+		<a href="html/livingroom.html">Living Room</a>
+	</nav>
+	<div id="flexcontainer">
+		<div id="survey">
+			<h2>Survey</h2>
+			<p class="regfont">
+				How did you find out about this apartment? Click all that apply:
+			</p>
+			<form name="surveyform"
+				  method="POST"
+				  action="https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+
+				<input type="checkbox" name="referrer" value="web" id="web">
+				<label for="web">Web</label>
+				<input type="checkbox" name="referrer" value="friend" id="friend">
+				<label for="web">Friend</label>
+				<input type="checkbox" name="referrer" value="newspaper" id="newspaper">
+				<label for="web">Newspaper</label>
+				<br>
+				<br>
+
+
+				 <input type="submit" name="sendform" value="Submit">
+				 &nbsp;&nbsp;&nbsp;
+				 <input type="reset" name="clearform" value="Clear Form">
+			</form>
+		</div>
+		<div id="services">
+			<h2>Services</h2>
+			<table>
+				<tr>
+					<th>Services</th>
+					<th>Day/Hours</th>
+				</tr>
+				<tr>
+					<td>Gym</td>
+					<td rowspan="2">Hours: Monday - Friday 6am - 10pm, Saturday 8am - 8pm,Sunday 8am - 5pm </td>
+				</tr>
+				<tr>
+					<td>Pool</td>
+				</tr>
+				<tr>
+					<td>Laundry</td>
+					<td>24/7</td>
+				</tr>
+				<tr>
+					<td colspan="2" id="warning">Please do not allow people you do not know to use these facilities</td>
+				</tr>
+			</table>
+		</div>
+		<div id="location">
+			<h2>Location</h2>
+			<figure>
+				<img src="images/location.png" alt="location">
+			</figure>
+		</div>	
+		<div id="welcome">
+			<h2>Welcome</h2>
+			<audio controls id="audio">
+				<source src="media/apartment.mp3" type="audio/mpeg">
+			</audio>
+			<p>
+				Transcript:<br><br>
+				Hello. Welcome to our apartment. You’ll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you!
+			</p>
+		</div>
+	</div>
+
+
+	<div id="gallery">
+		<div class="box">
+			<h3>Balcony</h3>
+			<figure>
+				<img src="images/thumbnails/balcony_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+		<div class="box">
+			<h3>Bathroom</h3>
+			<figure>
+				<img src="images/thumbnails/bathroom_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+		<div class="box">
+			<h3>Bedroom</h3>
+			<figure>
+				<img src="images/thumbnails/bedroom_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+		<div class="box">
+			<h3>Dining Room</h3>
+			<figure>
+				<img src="images/thumbnails/diningroom_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+		<div class="box">
+			<h3>Kitchen</h3>
+			<figure>
+				<img src="images/thumbnails/kitchen_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+		<div class="box">
+			<h3>Living Room</h3>
+			<figure>
+				<img src="images/thumbnails/livingroom_sm.jpg"
+					 alt="balcony">
+			</figure>
+		</div>
+	</div>
+
+	<footer>
+		<div>For more information contact: <a href="mailto:sandyandleslie@example.com">SandyAndLeslie@example.com</a></div>
+	</footer>
+</body>
+</html>

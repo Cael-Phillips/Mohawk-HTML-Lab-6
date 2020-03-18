@@ -1,0 +1,15 @@
+/*Cael Phillips, 000397240*/
+
+@media screen and (max-width: 48em){
+
+	#floorplan{
+		display: none;
+	}
+
+	nav a{
+		display: block;
+		line-height: 2em;
+		
+	}
+
+}

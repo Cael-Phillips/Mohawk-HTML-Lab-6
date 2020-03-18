@@ -1,0 +1,15 @@
+/*Cael Phillips, 000397240*/
+
+	#floorplan{
+		display: none;
+	}
+	#audio{
+		display: none;
+	}
+
+	nav a{
+		display: none;		
+	}
+	@page{
+		size: 8.5in 11in;
+	}
